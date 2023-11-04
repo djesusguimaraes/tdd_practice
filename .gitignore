@@ -8,6 +8,10 @@
 .buildlog/
 .history
 .svn/
+.fvm/flutter_sdk
+*.lock
+*.generated.dart
+*.g.dart
 
 # IntelliJ related
 *.iml
@@ -30,6 +34,7 @@
 .pub-cache/
 .pub/
 /build/
+/web/
 
 # Web related
 lib/generated_plugin_registrant.dart
