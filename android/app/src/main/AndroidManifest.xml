@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lage_score">
+    package="com.example.tdd_practice">
    <application
-        android:label="lage_score"
+        android:label="tdd_practice"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

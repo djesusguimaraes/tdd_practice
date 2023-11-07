@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-
-import '../models/task.model.dart';
+import 'package:tdd_practice/domain/models/task.model.dart';
 
 part 'todo.state.dart';
 

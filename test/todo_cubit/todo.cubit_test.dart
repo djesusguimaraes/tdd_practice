@@ -1,7 +1,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lage_score/todo_cubit/cubit/todo.cubit.dart';
-import 'package:lage_score/todo_cubit/models/task.model.dart';
+import 'package:tdd_practice/domain/models/task.model.dart';
+import 'package:tdd_practice/todo/todo_cubit/cubit/todo.cubit.dart';
 
 void main() {
   group("BLoC tests for the task cubit.", () {

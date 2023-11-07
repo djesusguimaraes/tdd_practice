@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lage_score/main.dart';
-import 'package:lage_score/todo_cubit/todo.page.dart';
+import 'package:tdd_practice/app.dart';
+import 'package:tdd_practice/todo/todo_list.widget.dart';
 
 import '../finder_extensions.dart';
 

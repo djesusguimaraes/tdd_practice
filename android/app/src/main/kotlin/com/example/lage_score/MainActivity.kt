@@ -1,4 +1,4 @@
-package com.example.lage_score
+package com.example.tdd_practice
 
 import io.flutter.embedding.android.FlutterActivity
 
