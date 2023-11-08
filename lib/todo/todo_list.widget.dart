@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tdd_practice/domain/models/task.model.dart';
-import 'package:tdd_practice/todo/todo_cubit/cubit/todo.cubit.dart';
 
 class TodoListWidget extends StatelessWidget {
   const TodoListWidget({
@@ -19,32 +17,29 @@ class TodoListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => TodoCubit(),
-      child: Scaffold(
-        appBar: AppBar(title: const Text('Todo')),
-        body: Column(
-          children: [
-            AddTaskSection(onAddTask: onAddTask),
-            Expanded(
-              child: Builder(
-                builder: (context) {
-                  if (tasks.isNotEmpty) {
-                    return ListView.builder(
-                      itemCount: tasks.length,
-                      itemBuilder: (context, index) => TaskCell(
-                        task: tasks.elementAt(index),
-                        onTaskCompleted: onTaskCompleted,
-                        onTaskDeleted: onTaskDeleted,
-                      ),
-                    );
-                  }
-                  return const Center(child: Text("No tasks yet"));
-                },
-              ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('Todo')),
+      body: Column(
+        children: [
+          AddTaskSection(onAddTask: onAddTask),
+          Expanded(
+            child: Builder(
+              builder: (context) {
+                if (tasks.isNotEmpty) {
+                  return ListView.builder(
+                    itemCount: tasks.length,
+                    itemBuilder: (context, index) => TaskCell(
+                      task: tasks.elementAt(index),
+                      onTaskCompleted: onTaskCompleted,
+                      onTaskDeleted: onTaskDeleted,
+                    ),
+                  );
+                }
+                return const Center(child: Text("No tasks yet"));
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -65,6 +60,7 @@ class TaskCell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      tileColor: task.isDone! ? Colors.green[100] : null,
       onTap: () => onTaskCompleted?.call(task),
       onLongPress: () => onTaskDeleted?.call(task),
       title: Text(task.text),

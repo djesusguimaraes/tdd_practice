@@ -14,6 +14,10 @@ class HomePage extends StatelessWidget {
           title: const Text('Todo'),
           onTap: () => Navigator.pushNamed(context, AppRoutes.todoCubit),
         ),
+        ListTile(
+          title: const Text('Todo Riverpod'),
+          onTap: () => Navigator.pushNamed(context, AppRoutes.todoRiverpod),
+        ),
       ]),
     );
   }
